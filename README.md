@@ -44,3 +44,4 @@ BASEHUB_TOKEN="<get-it-from-your-basehub-repo>"
 pnpm dev
 \`\`\`
 # Updated for Vercel deployment
+# Fixed email for Vercel deployment
