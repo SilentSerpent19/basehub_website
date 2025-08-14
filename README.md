@@ -43,3 +43,4 @@ BASEHUB_TOKEN="<get-it-from-your-basehub-repo>"
 \`\`\`bash
 pnpm dev
 \`\`\`
+# Updated for Vercel deployment
