@@ -113,8 +113,8 @@ function NavigationMenuLinkWithMenu({ _title, href, sublinks }: HeaderLiksFragme
               const { href, _title } =
                 sublink.link.__typename === "PageReferenceComponent"
                   ? {
-                      href: sublink.link.page.pathname,
-                      _title: sublink.link.page._title,
+                      href: `/${sublink.link._slug}`,
+                      _title: sublink.link._title,
                     }
                   : {
                       href: sublink.link.text,
@@ -281,8 +281,8 @@ function ItemWithSublinks({
           const { href, _title } =
             sublink.link.__typename === "PageReferenceComponent"
               ? {
-                  href: sublink.link.page.pathname,
-                  _title: sublink.link.page._title,
+                  href: `/${sublink.link._slug}`,
+                  _title: sublink.link._title,
                 }
               : {
                   href: sublink.link.text,

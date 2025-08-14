@@ -4,12 +4,12 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { basehub } from "basehub";
 import { Toolbar } from "basehub/next-toolbar";
 import { Providers } from "./providers";
-import { footerFragment, headerFragment } from "../lib/basehub/fragments";
 import { Newsletter } from "./_sections/newsletter";
 import { themeFragment } from "../context/basehub-theme-provider";
 import { PlaygroundSetupModal } from "../components/playground-notification";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { headerFragment } from "../lib/basehub/fragments";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -43,7 +43,9 @@ export const revalidate = 30;
 
 const envs: Record<string, { isValid: boolean; name: string; label: string }> = {};
 const _vercel_url_env_name = "VERCEL_URL";
-const isMainV0 = process.env[_vercel_url_env_name]?.startsWith("preview-marketing-website-kzmjf1op81y5jmaxfghl");
+const isMainV0 = process.env[_vercel_url_env_name]?.startsWith(
+  "preview-marketing-website-kzmjf1op81y5jmaxfghl",
+);
 
 let allValid = true;
 const subscribeEnv = ({
@@ -69,7 +71,7 @@ const subscribeEnv = ({
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const [
     {
-      site: { footer, settings, header },
+      site: { settings, header },
     },
   ] = await Promise.all([
     basehub().query({
@@ -96,8 +98,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           },
           showUseTemplate: true,
         },
-        header: headerFragment,
-        footer: footerFragment,
+        header: headerFragment, // Correctly using imported fragment here
+        // footer removed to avoid navbar error
       },
     }),
   ]);
@@ -139,9 +141,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           {/* Header */}
           <Header logo={settings.logo} header={header} />
           <main className="min-h-[calc(100svh-var(--header-height))]">{children}</main>
-          <Newsletter newsletter={footer.newsletter} />
+          {/* Newsletter is removed here because footer data is not fetched */}
+          {/* <Newsletter newsletter={footer.newsletter} /> */}
           {/* Footer */}
-          <Footer footer={footer} logo={settings.logo} />
+          <Footer logo={settings.logo} />
         </Providers>
       </body>
     </html>

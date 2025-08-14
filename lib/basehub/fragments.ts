@@ -137,10 +137,8 @@ const headerLinksFragment = fragmentOn("HeaderNavbarLinkComponent", {
           text: true,
         },
         on_PageReferenceComponent: {
-          page: {
-            pathname: true,
-            _title: true,
-          },
+          _title: true,
+          _slug: true,
         },
       },
     },
