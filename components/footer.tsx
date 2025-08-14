@@ -151,7 +151,7 @@ export const Footer = ({ logo }: { logo: DarkLightImageFragment }) => {
               </li>
               <li>
                 <Link
-                  href="/leistungen/meta-ads"
+                  href="/termin-buchen"
                   className="text-[--text-secondary] transition-colors hover:text-[--accent-500] dark:text-[--dark-text-secondary] dark:hover:text-[--dark-accent-500]"
                 >
                   Meta Ads
@@ -159,7 +159,7 @@ export const Footer = ({ logo }: { logo: DarkLightImageFragment }) => {
               </li>
               <li>
                 <Link
-                  href="/leistungen/google-ads"
+                  href="/termin-buchen"
                   className="text-[--text-secondary] transition-colors hover:text-[--accent-500] dark:text-[--dark-text-secondary] dark:hover:text-[--dark-accent-500]"
                 >
                   Google Ads
@@ -207,7 +207,7 @@ export const Footer = ({ logo }: { logo: DarkLightImageFragment }) => {
               </li>
               <li>
                 <Link
-                  href="/leistungen/webinar-funnels"
+                  href="/termin-buchen"
                   className="text-[--text-secondary] transition-colors hover:text-[--accent-500] dark:text-[--dark-text-secondary] dark:hover:text-[--dark-accent-500]"
                 >
                   Webinar Funnels
