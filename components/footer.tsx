@@ -254,7 +254,7 @@ export const Footer = ({ logo }: { logo: DarkLightImageFragment }) => {
           <div className="mb-6 flex items-center justify-center">
             {/* All Certifications Image */}
             <img
-              src="/certifications-badges.png"
+              src="/ZERTIFIKATE.png"
               alt="Company Certifications and Partnerships"
               className="h-auto max-w-full"
             />
