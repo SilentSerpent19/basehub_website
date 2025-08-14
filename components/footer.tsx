@@ -28,8 +28,9 @@ export const Footer = ({ logo }: { logo: DarkLightImageFragment }) => {
               <p className="font-medium">Our location: Grassistr. 19, 04107 Leipzig</p>
               <p className="font-medium">Phone & WhatsApp: 0176 3449 2580</p>
               <p className="leading-relaxed">
-                We bring you more customer inquiries, sales & applications by expanding your digital
-                presence primarily on Meta & Google. Fast, data-based, profitable & scalable.
+                Wir bringen dir mehr Kundenanfragen, Verkäufe & Bewerbungen durch den Ausbau deiner
+                digitalen Präsenz primär auf Meta & Google. Schnelll, datenbasiert, profitabel &
+                skalierbar.
               </p>
               <Link
                 href="/termin-buchen"
@@ -44,7 +45,7 @@ export const Footer = ({ logo }: { logo: DarkLightImageFragment }) => {
           {/* Middle Column - Useful Links */}
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-[--text-primary] dark:text-[--dark-text-primary]">
-              Useful links
+              Nützliche Links
             </h3>
             <ul className="space-y-3 text-base">
               <li>
@@ -250,72 +251,19 @@ export const Footer = ({ logo }: { logo: DarkLightImageFragment }) => {
 
         {/* Partner/Certification Section */}
         <div className="mt-16 border-t border-[--border] pt-12 dark:border-[--dark-border]">
-          <div className="mb-6 flex flex-wrap items-center justify-center gap-6">
-            {/* Meta Business Partner */}
-            <div className="flex items-center space-x-2 rounded-full bg-blue-600 px-4 py-2">
-              <span className="font-bold text-white">M</span>
-              <span className="text-sm text-white">Meta Business Partner</span>
-            </div>
-
-            {/* TikTok */}
-            <div className="rounded-full bg-black px-4 py-2">
-              <span className="text-sm font-bold text-white">TikTok</span>
-            </div>
-
-            {/* SEHR GUT */}
-            <div className="flex items-center space-x-1 rounded bg-yellow-500 px-3 py-2">
-              <span className="text-sm font-bold text-black">SEHR GUT</span>
-              <div className="flex space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-xs text-black">
-                    ★
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Google Partner */}
-            <div className="flex items-center space-x-2 rounded bg-blue-600 px-3 py-2">
-              <span className="font-bold text-white">G</span>
-              <span className="text-sm text-white">Google Partner</span>
-            </div>
-
-            {/* WebinarJam */}
-            <div className="rounded bg-purple-600 px-3 py-2">
-              <span className="text-sm font-bold text-white">WebinarJam</span>
-            </div>
-
-            {/* Shopify Partners */}
-            <div className="rounded bg-green-600 px-3 py-2">
-              <span className="text-sm font-bold text-white">Shopify Partners</span>
-            </div>
-
-            {/* SISTRIX */}
-            <div className="rounded bg-gray-700 px-3 py-2">
-              <span className="text-sm font-bold text-white">SISTRIX Q Marketingexperten</span>
-            </div>
-
-            {/* Salesforce Certifications */}
-            <div className="rounded bg-blue-500 px-3 py-2">
-              <span className="text-xs font-bold text-white">
-                SALESFORCE CERTIFIED Administrator
-              </span>
-            </div>
-
-            <div className="rounded bg-blue-500 px-3 py-2">
-              <span className="text-xs font-bold text-white">
-                SALESFORCE CERTIFIED Marketing Cloud Email Specialist
-              </span>
-            </div>
+          <div className="mb-6 flex items-center justify-center">
+            {/* All Certifications Image */}
+            <img
+              src="/certifications-badges.png"
+              alt="Company Certifications and Partnerships"
+              className="h-auto max-w-full"
+            />
           </div>
 
           <div className="text-center">
             <p className="flex items-center justify-center space-x-2 text-base text-[--text-secondary] dark:text-[--dark-text-secondary]">
               <span className="text-yellow-400">✨</span>
-              <span>
-                Our services are <strong>multi-certified</strong> &{" "}
-                <strong>excellently rated</strong>.
-              </span>
+              <span>Unsere Leistungen sind mehrfach zertifiziert & ausgezeichnet bewertet.</span>
             </p>
           </div>
         </div>
