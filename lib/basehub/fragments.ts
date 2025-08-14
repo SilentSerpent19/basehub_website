@@ -158,22 +158,4 @@ export const headerFragment = fragmentOn("Header", {
 
 export type HeaderFragment = fragmentOn.infer<typeof headerFragment>;
 
-export const footerFragment = fragmentOn("Footer", {
-  newsletter: newsletterFragment,
-  copyright: true,
-  navbar: {
-    items: {
-      _title: true,
-      url: true,
-    },
-  },
-  socialLinks: {
-    _title: true,
-    icon: {
-      url: true,
-    },
-    url: true,
-  },
-});
 
-export type FooterFragment = fragmentOn.infer<typeof footerFragment>;
