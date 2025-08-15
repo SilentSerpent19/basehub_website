@@ -55,10 +55,10 @@ export interface Scalars {
     BSHBSelect_1795611679: 'info' | 'warning',
     BSHBSelect_1868728927: 'right' | 'center' | 'left' | 'none',
     BSHBSelect_1879002554: 'full image' | 'gradient' | 'Image bottom' | 'Image Right',
-    BSHBSelect_2118350464: 'amber' | 'blue' | 'cyan' | 'emerald' | 'fuchsia' | 'gray' | 'green' | 'indigo' | 'lime' | 'neutral' | 'orange' | 'pink' | 'purple' | 'red' | 'rose' | 'sky' | 'slate' | 'stone' | 'teal' | 'violet' | 'yellow' | 'zinc',
     BSHBSelect__1142171011: 'large',
     BSHBSelect__1219632885: 'primary' | 'secondary' | 'tertiary',
     BSHBSelect__2134102963: 'accordion' | 'list',
+    BSHBSelect__528149514: 'amber' | 'blue' | 'cyan' | 'emerald' | 'fuchsia' | 'gray' | 'green' | 'indigo' | 'lime' | 'neutral' | 'orange' | 'pink' | 'purple' | 'red' | 'rose' | 'sky' | 'slate' | 'stone' | 'teal' | 'violet' | 'yellow' | 'zinc',
     BSHBSelect__605999048: 'gray' | 'neutral' | 'slate' | 'stone' | 'zinc',
     Boolean: boolean,
     CodeSnippetLanguage: B_Language,
@@ -1198,7 +1198,7 @@ export interface LinkGroupsItem {
     _analyticsKey: Scalars['String']
     _dashboardUrl: Scalars['String']
     /** Array of search highlight information with field names and HTML markup */
-    _highlight: (SearchHighlight_tSjQ2a8YfqOzEgs1pBiPf[] | null)
+    _highlight: (SearchHighlight_4af9d3b63182664d76712[] | null)
     _id: Scalars['String']
     _idPath: Scalars['String']
     _slug: Scalars['String']
@@ -1836,6 +1836,14 @@ export interface SearchHighlight_4ad9b699d0714720d2f30 {
     __typename: 'SearchHighlight_4ad9b699d0714720d2f30'
 }
 
+export interface SearchHighlight_4af9d3b63182664d76712 {
+    /** The field/path that was matched (e.g., "title", "body.content") */
+    by: Scalars['String']
+    /** HTML snippet with <mark> tags around the matched terms */
+    snippet: Scalars['String']
+    __typename: 'SearchHighlight_4af9d3b63182664d76712'
+}
+
 export interface SearchHighlight_51ebe9bc569b719f020c0 {
     /** The field/path that was matched (e.g., "title", "body.content") */
     by: Scalars['String']
@@ -2092,14 +2100,6 @@ export interface SearchHighlight_fe92e68a7be397a29dffa {
     __typename: 'SearchHighlight_fe92e68a7be397a29dffa'
 }
 
-export interface SearchHighlight_tSjQ2a8YfqOzEgs1pBiPf {
-    /** The field/path that was matched (e.g., "title", "body.content") */
-    by: Scalars['String']
-    /** HTML snippet with <mark> tags around the matched terms */
-    snippet: Scalars['String']
-    __typename: 'SearchHighlight_tSjQ2a8YfqOzEgs1pBiPf'
-}
-
 export interface Sections {
     _analyticsKey: Scalars['String']
     _dashboardUrl: Scalars['String']
@@ -2314,7 +2314,7 @@ export interface Theme {
     _slugPath: Scalars['String']
     _sys: BlockDocumentSys
     _title: Scalars['String']
-    accent: Scalars['BSHBSelect_2118350464']
+    accent: Scalars['BSHBSelect__528149514']
     grayScale: Scalars['BSHBSelect__605999048']
     __typename: 'Theme'
 }
@@ -5631,7 +5631,7 @@ export interface LinkGroupsItemGenqlSelection{
     scope?: (AnalyticsKeyScope | null)} } | boolean | number
     _dashboardUrl?: boolean | number
     /** Array of search highlight information with field names and HTML markup */
-    _highlight?: SearchHighlight_tSjQ2a8YfqOzEgs1pBiPfGenqlSelection
+    _highlight?: SearchHighlight_4af9d3b63182664d76712GenqlSelection
     _id?: boolean | number
     _idPath?: boolean | number
     _slug?: boolean | number
@@ -6648,6 +6648,14 @@ export interface SearchHighlight_4ad9b699d0714720d2f30GenqlSelection{
     __typename?: boolean | number
 }
 
+export interface SearchHighlight_4af9d3b63182664d76712GenqlSelection{
+    /** The field/path that was matched (e.g., "title", "body.content") */
+    by?: boolean | number
+    /** HTML snippet with <mark> tags around the matched terms */
+    snippet?: boolean | number
+    __typename?: boolean | number
+}
+
 export interface SearchHighlight_51ebe9bc569b719f020c0GenqlSelection{
     /** The field/path that was matched (e.g., "title", "body.content") */
     by?: boolean | number
@@ -6897,14 +6905,6 @@ export interface SearchHighlight_fa548e798460cfc2b1583GenqlSelection{
 }
 
 export interface SearchHighlight_fe92e68a7be397a29dffaGenqlSelection{
-    /** The field/path that was matched (e.g., "title", "body.content") */
-    by?: boolean | number
-    /** HTML snippet with <mark> tags around the matched terms */
-    snippet?: boolean | number
-    __typename?: boolean | number
-}
-
-export interface SearchHighlight_tSjQ2a8YfqOzEgs1pBiPfGenqlSelection{
     /** The field/path that was matched (e.g., "title", "body.content") */
     by?: boolean | number
     /** HTML snippet with <mark> tags around the matched terms */
@@ -9732,6 +9732,10 @@ export interface FragmentsMap {
     root: SearchHighlight_4ad9b699d0714720d2f30,
     selection: SearchHighlight_4ad9b699d0714720d2f30GenqlSelection,
 }
+  SearchHighlight_4af9d3b63182664d76712: {
+    root: SearchHighlight_4af9d3b63182664d76712,
+    selection: SearchHighlight_4af9d3b63182664d76712GenqlSelection,
+}
   SearchHighlight_51ebe9bc569b719f020c0: {
     root: SearchHighlight_51ebe9bc569b719f020c0,
     selection: SearchHighlight_51ebe9bc569b719f020c0GenqlSelection,
@@ -9859,10 +9863,6 @@ export interface FragmentsMap {
   SearchHighlight_fe92e68a7be397a29dffa: {
     root: SearchHighlight_fe92e68a7be397a29dffa,
     selection: SearchHighlight_fe92e68a7be397a29dffaGenqlSelection,
-}
-  SearchHighlight_tSjQ2a8YfqOzEgs1pBiPf: {
-    root: SearchHighlight_tSjQ2a8YfqOzEgs1pBiPf,
-    selection: SearchHighlight_tSjQ2a8YfqOzEgs1pBiPfGenqlSelection,
 }
   Sections: {
     root: Sections,
