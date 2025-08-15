@@ -27,8 +27,7 @@ import {
 } from "../../components/form-components";
 import "../../basehub.config";
 
-export const dynamic = "force-static";
-export const revalidate = 30;
+export const dynamic = "force-dynamic";
 
 export const generateStaticParams = async () => {
   const data = await basehub().query({
